@@ -1,4 +1,4 @@
-import math
+from math import floor, log10
 
 class BigRandom:
     def __init__(self):
@@ -16,15 +16,10 @@ class BigRandom:
         i    = 0
 
         for line in data:
-            if i < 10:
-                dex = 2
-            else:
-                dex = math.floor(math.log10(i)) + 2
-
+            dex  = 2 if i < 10 else floor(log10(i)) + 2
             line = line[dex:]
             noh += sum(1 for x in line if x == '#')
             suc += sum(ord(x) for x in line)
-
             i   += 1
 
         data.close()
