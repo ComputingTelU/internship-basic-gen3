@@ -18,8 +18,22 @@ class BigRandom:
         for line in data:
             dex  = 2 if i < 10 else floor(log10(i)) + 2
             line = line[dex:]
-            noh += sum(1 for x in line if x == '#')
-            suc += sum(ord(x) for x in line)
+
+            # An alternative using List Comprehension
+            """noh += sum(1 for x in line if x == "#")
+            suc += sum(ord(x) for x in line)"""
+            #real	0m1.098s
+            #user	0m1.083s
+            #sys	0m0.003s
+
+            # Better use this one
+            for x in line:
+                if x == "#": noh += 1
+                suc += ord(x)
+            #real	0m0.998s
+            #user	0m0.993s
+            #sys	0m0.003s
+
             i   += 1
 
         data.close()
