@@ -16,9 +16,10 @@ class BigRandom:
             for x in c:
                 c = c[1:]
                 if (x == "#"):
-                    noh = char(#)
                     break
             for x in c:
+                if (x == "#"):
+                    noh += 1
                 suc += ord(x)
         return (noh,suc)
 
