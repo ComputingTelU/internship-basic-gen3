@@ -8,13 +8,15 @@ def answer():
     # your algorithm
     for line in data:
         for ch in line:
+            suc += ord(ch)
             if ch == '#':
                 noh += 1
         noh -= 1
-    suc = sum(ord(ch) for ch in data)
+
     data.close()
-    print(int(noh))
-    print(int(suc))
     return (noh,suc)
 
-answer()
+noh, suc = answer()
+
+print('NOH: ' + str(noh))
+print('SUC: ' + str(suc))
