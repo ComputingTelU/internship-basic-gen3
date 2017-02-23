@@ -14,20 +14,32 @@ class Caesar:
             key = 1
             while not(cond):
                 dummy= line
-                x=[]
+                kanan=[]
+                kiri=[]
                 for each in dummy:
-                    x.append(each)
-                for i in range(len(x)):
-                    x[i] = chr((int(ord(x[i])) + key) % 128)
-                dummy= "".join(x)
+                    kanan.append(each)
+                for i in range(len(kanan)):
+                    kanan[i] = chr((int(ord(kanan[i])) + key) % 127)
+                for each in dummy:
+                    kiri.append(each)
+                for i in range(len(kiri)):
+                    index=(int(ord(kiri[i])) - key)
+                    if index<0:
+                        index+=127
+                    kiri[i] = chr(index)
+                dummy= "".join(kanan)
                 if text in dummy:
                     cond=True
                     #buat nge cek hasil dari decode nya
-                    #print(dummy)
+                    print(dummy)
+                dummy = "".join(kiri)
+                if text in dummy:
+                    cond = True
+                    # buat nge cek hasil dari decode nya
+                    print(dummy)
                 else:
                     key+=1
         return (key)
     # add methods if you need more
 x= Caesar()
 print(x.answer())
-#jawaban nya ga ada yang benar, 81 buat tulisan dan kata kata benar, 82 buat spasi enter dan angka angka
