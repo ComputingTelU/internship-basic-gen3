@@ -1,6 +1,6 @@
 class BigRandom:
     def __init__(self):
-        self.data = "data.txt"
+        self.data = open("data.txt","r")
         # add attributes if you need more
 
     def answer(self):
@@ -11,6 +11,22 @@ class BigRandom:
 
         # your algorithm
 
-        return (noh,suc)
+        for x in b.data:
+            for i in x:
+                x = x[1:]
+                if (i == "#"):
+                    break
+            for i in x:
+                if ( i == "#"):
+                    noh += 1
+                suc += ord(i)
+        return (noh, suc)
+
+b = BigRandom()
+
+print (b.answer())
+
+
+
 
     # add methods if you need more
