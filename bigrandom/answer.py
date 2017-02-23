@@ -4,7 +4,7 @@ class BigRandom:
         # add attributes if you need more
 
     def answer(self):
-        noh, suc = 0
+        noh, suc = 0, 0
         nomor = ''.join([str(x) for x in range(10000)]) # 1234567891011121314...999910000
         for line in self.data.readlines(): 
             noh = noh + len([x for x in line if x == '#']) # count seluruh '#'
