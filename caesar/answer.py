@@ -16,11 +16,19 @@ class Caesar:
             while not(cond):
                 dummy= line
                 kanan=[]
-                kiri=[]
+                #Pendekatan Kanan
                 for each in dummy:
                     kanan.append(each)
                 for i in range(len(kanan)):
                     kanan[i] = chr((int(ord(kanan[i])) + key) % 127)
+                dummy = "".join(kanan)
+                if text in dummy:
+                    cond = True
+                    # buat nge cek hasil dari decode nya
+                    print(dummy)
+                #Pendekatan Kiri
+                dummy = line
+                kiri=[]
                 for each in dummy:
                     kiri.append(each)
                 for i in range(len(kiri)):
@@ -28,11 +36,6 @@ class Caesar:
                     if index<0:
                         index+=127
                     kiri[i] = chr(index)
-                dummy= "".join(kanan)
-                if text in dummy:
-                    cond=True
-                    #buat nge cek hasil dari decode nya
-                    print(dummy)
                 dummy = "".join(kiri)
                 if text in dummy:
                     cond = True
