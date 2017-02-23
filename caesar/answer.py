@@ -8,7 +8,7 @@ class Caesar:
 
         # your algorithm
         f = open(self.ciphertext, "r")
-        text="Tugas"
+        text="Tugas" #Di ambil dari clue bahwa ciphertext memuat kata Clue tugas ke prof
         for line in f:
             cond = False
             key = 1
