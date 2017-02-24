@@ -1,7 +1,6 @@
 class BigRandom:
     def __init__(self):
-        self.data = "data.txt"
-        # add attributes if you need more
+        self.data = open("data.txt","r")
 
     def answer(self):
         noh = 0 # variable to store number of hashtag
@@ -10,7 +9,17 @@ class BigRandom:
                 # ommiting line number and its hashtag
 
         # your algorithm
-
+        for line in big.data:
+            for c in line:
+                c = c[1:]
+                if (c == "#"):
+                    break
+            for c in line:
+                suc += ord(c)
+                if c == '#':
+                    noh += 1
+            noh -= 1
         return (noh,suc)
 
-    # add methods if you need more
+big = BigRandom()
+print (big.answer())
