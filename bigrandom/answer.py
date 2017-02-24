@@ -8,7 +8,7 @@ class BigRandom:
                 # ommiting line number's hashtag
         suc = 0 # variable to store sum of character's code in ascii,
                 # ommiting line number and its hashtag
-<<<<<<< HEAD
+# <<<<<<< HEAD
         data = open('data.txt','r')
         # your algorithm
         line = ""
@@ -40,11 +40,11 @@ class BigRandom:
     # add methods if you need more
 big = BigRandom()
 print (big.answer())
-=======
+
 
         # your algorithm
 
-        return (noh,suc)
+        # return (noh,suc)
 
     # add methods if you need more
->>>>>>> 64e1f92e25e7147b206ac73695e846881e7f9b0d
+# >>>>>>> 64e1f92e25e7147b206ac73695e846881e7f9b0d

@@ -8,25 +8,21 @@ class Caesar:
 
         # your algorithm
 
-        return (key)
+
 
     # add methods if you need more
-        word = open("ciphertext.txt,","r")
-        text = open("apagitu.txt","w");
-        i=0
+        word = open(self.ciphertext,"r")
+        # text = open("apagitu.txt","w");
+
         new=""
-        for x in word.readline():
+        for x in word.read():
             i=0
             i=ord(str(x))-46
             if(i<0):
                 i=i+127
             new += chr(i)
-        text.write(new)
+        # text.write(new)
         print(new)
-        text.close()
-        word = open("ciphertext.txt","r")
-        import collections
-        s = word.readline()
-        print(ord(str(collections.Counter(s).most_common(1))))
+        return (key)
 ans = Caesar()
 print (ans.answer())
