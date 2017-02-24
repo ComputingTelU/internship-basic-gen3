@@ -4,10 +4,23 @@ class Caesar:
         # add attributes if you need more
 
     def answer(self):
-        key = 0 # variable to store the key
+        # variable to store the key      
 
-        # your algorithm
+        # your algorithm    
 
-        return (key)
+        # add methods if you need more
+	    key = 46 #hehe
+	    word = open(self.ciphertext,"r")
 
-    # add methods if you need more
+	    new=""
+	    for x in word.read():
+	    	i = ord(str(x))-key
+	    	if(i<0):
+	    		i=i+127
+	    	new = new+chr(i)
+
+	    print(new)
+	    return(key)
+	    
+ans = Caesar()
+print (ans.answer())
