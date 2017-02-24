@@ -10,7 +10,7 @@ class BigRandom:
                 # ommiting line number and its hashtag
 
         # your algorithm
-        my_file = open ("ok.txt", "r")
+        my_file = open (self.data, "r")
         for num in my_file:             #masuk num berisi semua data myfile
             while (num[0] != "#"):      #baca sampek ketemu pagar pertama
                 num = num[1:]           #sama seperti num++
