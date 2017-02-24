@@ -1,22 +1,28 @@
-def answer():
-    noh = 0 # variable to store number of hashtag
-            # ommiting line number's hashtag
-    suc = 0 # variable to store sum of character's code in ascii,
-            # ommiting line number and its hashtag
-    data = open('data.txt', 'r')
-    l = data.readline()
-    # your algorithm
-    for line in data:
-        for ch in line:
-            suc += ord(ch)
-            if ch == '#':
-                noh += 1
-        noh -= 1
+class BigRandom:
+    def __init__(self):
+        self.data = "data.txt"
+        # add attributes if you need more
 
-    data.close()
-    return (noh,suc)
+    def answer(self):
+        noh = 0 # variable to store number of hashtag
+                # ommiting line number's hashtag
+        suc = 0 # variable to store sum of character's code in ascii,
+                # ommiting line number and its hashtag
+        data = open(self.data, 'r')
+        l = data.readline()
+        # your algorithm
+        for line in data:
+            for ch in line:
+                suc += ord(ch)
+                if ch == '#':
+                    noh += 1
+            noh -= 1
 
-noh, suc = answer()
+        data.close()
+        return (noh,suc)
+
+ans = BigRandom()
+noh, suc = ans.answer()
 
 print('NOH: ' + str(noh))
 print('SUC: ' + str(suc))
