@@ -10,7 +10,20 @@ class BigRandom:
                 # ommiting line number and its hashtag
 
         # your algorithm
-
-        return (noh,suc)
+         my_file = open ("ok.txt", "r")
+        for a in my_file:
+            for b in a:
+                pagar = 0
+                for c in b:
+                    if (c=="#"):
+                        noh = noh+1
+                    else:
+                        suc += ord(c)
+        my_file.close()
+        return (noh-10000,suc)
+    
+ok = BigRandom()
+print(ok.answer())
+    
 
     # add methods if you need more
