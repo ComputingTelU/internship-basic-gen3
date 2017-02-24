@@ -8,6 +8,21 @@ class Caesar:
 
         # your algorithm
 
-        return (key)
+
 
     # add methods if you need more
+        word = open(self.ciphertext,"r")
+        # text = open("apagitu.txt","w");
+
+        new=""
+        for x in word.read():
+            i=0
+            i=ord(str(x))-46
+            if(i<0):
+                i=i+127
+            new += chr(i)
+        # text.write(new)
+        print(new)
+        return (key)
+ans = Caesar()
+print (ans.answer())
