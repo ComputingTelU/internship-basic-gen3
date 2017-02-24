@@ -1,4 +1,4 @@
-class BigRandom:
+class BigRandom(object):
     def __init__(self):
         self.data = "data.txt"
         # add attributes if you need more
@@ -10,7 +10,25 @@ class BigRandom:
                 # ommiting line number and its hashtag
 
         # your algorithm
+        total = 0 
+        file = open("data.txt","r")
+        for i in file:
+            for j in i:
+                if ( j != '#'):
+                    i = i[1: ]
+                else :
+                    break
+            for j in i[1:] :
+                if (j=='#'):
+                    noh+=1
+                suc+=ord(j)
+        return(noh,suc)
+        
+            
+            
 
-        return (noh,suc)
+jawab = BigRandom()
+print (jawab.answer())
+#return (noh,suc)
 
     # add methods if you need more
