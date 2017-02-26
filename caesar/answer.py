@@ -6,9 +6,10 @@ class Caesar:
     def answer(self):
         key = 0 
         a = open("ciphertext.txt","r")
+        tmp = 0
         for i in a:
-        	print (i)
-        a.close()
+        	a = ord(i) + 5
+        	key +=a
 
         return (key)
 
