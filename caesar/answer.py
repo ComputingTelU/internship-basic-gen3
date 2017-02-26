@@ -4,13 +4,16 @@ class Caesar:
       
 
     def answer(self):
-        key = 0 
+        key = 46 
         a = open("ciphertext.txt","r")
-        tmp = 0
+        x =""
         for i in a:
-        	a = ord(i) + 5
-        	key +=a
-
+        	for y in i:
+        		tmp = ord(str(y))-key
+        		if (tmp<0):
+        			tmp += 127
+       		x += chr(tmp)
+        print (x)
         return (key)
 
 b= Caesar()
