@@ -5,25 +5,26 @@ class BigRandom:
     def answer(self):
         noh = 0 
         suc = 0 
-        a = open(self.data,"r")
-        s=0
-        for x in a :
-            s+=1
+        text = open(self.data,"r")
+        jmlhline=0
+
+        for x in text : #mengakses per line
+            jmlhline +=1
             t=0
             tmp=0
-            for y in x:
+            for y in x: #mengakses per kata
                 t+=1
-                for z in y:
+                for z in y: #mengaskes per huruf
                     if (t == 1 and z != "#"):
                         tmp += ord(z)
                     if (z=="#"):
                         noh +=1
                     else :
                         suc += ord(z)
-                if (t==1):
-                    suc-=tmp
-        a.close()
-        noh -= s
+            suc -=tmp
+               
+        text.close()
+        noh -= jmlhline
         return (noh,suc)
 
 b= BigRandom()

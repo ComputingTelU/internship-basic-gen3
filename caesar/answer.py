@@ -3,11 +3,11 @@ class Caesar:
         self.ciphertext = "ciphertext.txt"
 
     def answer(self):
-        key = 46 
+        key = 0
         a = open(self.ciphertext,"r")
         x =""
-        for i in a:
-        	for y in i:
+        for i in a: #mengakes perkata
+        	for y in i: #mengakses perhuruf
         		tmp = ord(str(y))-key
         		if (tmp<0):
         			tmp += 127
