@@ -1,6 +1,7 @@
 class Caesar:
     def __init__(self):
         self.ciphertext = "ciphertext.txt"
+<<<<<<< HEAD
       
 
     def answer(self):
@@ -18,3 +19,15 @@ class Caesar:
 
 b= Caesar()
 print (b.answer())
+=======
+        # add attributes if you need more
+
+    def answer(self):
+        key = 0 # variable to store the key
+
+        # your algorithm
+
+        return (key)
+
+    # add methods if you need more
+>>>>>>> 64e1f92e25e7147b206ac73695e846881e7f9b0d
