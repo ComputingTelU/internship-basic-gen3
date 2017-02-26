@@ -1,13 +1,11 @@
 class BigRandom:
     def __init__(self):
         self.data = "data.txt"
-<<<<<<< HEAD
-
 
     def answer(self):
         noh = 0 
         suc = 0 
-        a = open("data.txt","r")
+        a = open(self.data,"r")
         s=0
         for x in a :
             s+=1
@@ -30,18 +28,3 @@ class BigRandom:
 
 b= BigRandom()
 print (b.answer())
-=======
-        # add attributes if you need more
-
-    def answer(self):
-        noh = 0 # variable to store number of hashtag
-                # ommiting line number's hashtag
-        suc = 0 # variable to store sum of character's code in ascii,
-                # ommiting line number and its hashtag
-
-        # your algorithm
-
-        return (noh,suc)
-
-    # add methods if you need more
->>>>>>> 64e1f92e25e7147b206ac73695e846881e7f9b0d
