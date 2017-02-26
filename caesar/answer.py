@@ -1,13 +1,19 @@
 class Caesar:
     def __init__(self):
         self.ciphertext = "ciphertext.txt"
-        # add attributes if you need more
 
     def answer(self):
-        key = 0 # variable to store the key
-
-        # your algorithm
-
+        key = 0
+        a = open(self.ciphertext,"r")
+        x =""
+        for i in a: #mengakes perkata
+        	for y in i: #mengakses perhuruf
+        		tmp = ord(str(y))-key
+        		if (tmp<0):
+        			tmp += 127
+       		x += chr(tmp)
+        print (x)
         return (key)
 
-    # add methods if you need more
+b= Caesar()
+print (b.answer())
