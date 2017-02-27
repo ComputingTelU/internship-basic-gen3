@@ -18,8 +18,9 @@ class Caesar:
         	tmp += chr(index)					#tiap karakter ditampung di sini
         print (tmp)
         print ("\nEnkrip yang digunakan: ", key)
-        return (key)
         my_file.close()
+        return (key)
+        
 hasil = Caesar()
 hasil.answer()
         
