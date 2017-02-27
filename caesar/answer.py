@@ -9,7 +9,6 @@ class Caesar:
         # your algorithm
         a = open(self.ciphertext, "r")
         b = ""
-        key = 46
         n = 0
         for x in a.read():
             n = ord(str(x))- key
