@@ -10,7 +10,7 @@ class BigRandom:
                 # ommiting line number and its hashtag
 
         # your algorithm
-        data = open(brd.data, "r")
+        data = open(self.data, "r")
         for line in data:
             i = 0
             while(line[0] != "#"):

@@ -7,9 +7,9 @@ class Caesar:
         key = 0 # variable to store the key
 
         # your algorithm
-        data = open(chiper.ciphertext, "r")
+        data = open(self.ciphertext, "r")
         Ascii = 127
-        key = 127 - 81
+        key = 46
         word = data.read()
         translate = ""
         for x in word:
@@ -18,7 +18,7 @@ class Caesar:
             if (code < 0):
                 code += Ascii
             translate += chr(code)
-        print(translate) 
+        #test translatenya berhasil >> print(translate) 
         data.close()
         return (key)
 
