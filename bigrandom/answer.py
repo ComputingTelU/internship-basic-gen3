@@ -3,6 +3,14 @@ class BigRandom:
     	self.data = "data.txt"
 
     def answer(self):
+
+        noh = 0 # variable to store number of hashtag
+               # ommiting line number's hashtag
+        suc = 0 # variable to store sum of character's code in ascii,
+               # ommiting line number and its hashtag
+
+        # your algorithm
+        
         self.data = open("data.txt", "r")
         noh, suc = 0, 0
         for line in self.data.readlines(): 
