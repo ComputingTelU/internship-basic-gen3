@@ -10,7 +10,19 @@ class BigRandom:
                 # ommiting line number and its hashtag
 
         # your algorithm
-
+        data= open (self.data,"r")
+        for line in data:
+        	for b in(line):
+        		if (b!="#"):
+        			line = line[1:]
+        		else:
+        			break
+        	for d in (line[1:]):
+        		if (d=="#"):
+        			noh+=1
+        		suc+=ord(d)
         return (noh,suc)
-
-    # add methods if you need more
+a=BigRandom()
+noh, suc=a.answer()
+print("suc: ", suc)
+print("noh: ", noh)
